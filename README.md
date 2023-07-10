@@ -1,34 +1,44 @@
-Curso-Taller ‘Introducción al Análisis de Biodiversidad Aplicado con R’
-(202109)
+Curso ‘Iniciación al Análisis de Biodiversidad y Ecología, con ayuda de
+IA, usando R’ (2023-julio)
 ================
-Por José Ramón Martínez Batlle, septiembre de 2021
+Por José Ramón Martínez Batlle, julio de 2023
 
--   [Intro](#intro)
-    -   [Expectativas.](#expectativas)
-    -   [El ecosistema del curso](#el-ecosistema-del-curso)
-    -   [¿Por qué R?](#por-qué-r)
-    -   [Software libre, paradigma, reproducibilidad y control de
-        versiones](#software-libre-paradigma-reproducibilidad-y-control-de-versiones)
-    -   [¿Cómo instalar R y RStudio?](#cómo-instalar-r-y-rstudio)
-    -   [La obtención de certificado, en cuatro
-        pasos](#la-obtención-de-certificado-en-cuatro-pasos)
--   [Análisis de biodiversidad](#análisis-de-biodiversidad)
-    -   [La parcela permanente de 50-ha de árboles de Barro Colorado
-        Island
-        (BCI).](#la-parcela-permanente-de-50-ha-de-árboles-de-barro-colorado-island-bci)
-    -   [Una rápida intro a R](#una-rápida-intro-a-r)
-    -   [Análisis exploratorio de datos (AED). ¿Por qué? Matrices de
-        comunidad y
-        ambiental.](#análisis-exploratorio-de-datos-aed-por-qué-matrices-de-comunidad-y-ambiental)
-    -   [Medidas de asociación:
-        distancia.](#medidas-de-asociación-distancia)
-    -   [Análisis de agrupamiento (cluster
-        analysis).](#análisis-de-agrupamiento-cluster-analysis)
-    -   [Análisis de ordenación.](#análisis-de-ordenación)
-    -   [Análisis de diversidad.](#análisis-de-diversidad)
-    -   [Hacia dónde va el análisis de
-        biodiversidad.](#hacia-dónde-va-el-análisis-de-biodiversidad)
-    -   [Referencias](#referencias)
+- <a href="#intro" id="toc-intro">Intro</a>
+  - <a href="#expectativas" id="toc-expectativas">Expectativas.</a>
+  - <a href="#el-ecosistema-del-curso" id="toc-el-ecosistema-del-curso">El
+    ecosistema del curso</a>
+  - <a href="#por-qué-r" id="toc-por-qué-r">¿Por qué R?</a>
+  - <a
+    href="#software-libre-paradigma-reproducibilidad-y-control-de-versiones"
+    id="toc-software-libre-paradigma-reproducibilidad-y-control-de-versiones">Software
+    libre, paradigma, reproducibilidad y control de versiones</a>
+  - <a href="#cómo-instalar-r-y-rstudio"
+    id="toc-cómo-instalar-r-y-rstudio">¿Cómo instalar R y RStudio?</a>
+- <a href="#análisis-de-biodiversidad"
+  id="toc-análisis-de-biodiversidad">Análisis de biodiversidad</a>
+  - <a
+    href="#la-parcela-permanente-de-50-ha-de-árboles-de-barro-colorado-island-bci"
+    id="toc-la-parcela-permanente-de-50-ha-de-árboles-de-barro-colorado-island-bci">La
+    parcela permanente de 50-ha de árboles de Barro Colorado Island
+    (BCI).</a>
+  - <a href="#una-rápida-intro-a-r" id="toc-una-rápida-intro-a-r">Una rápida
+    intro a R</a>
+  - <a
+    href="#análisis-exploratorio-de-datos-aed-por-qué-matrices-de-comunidad-y-ambiental"
+    id="toc-análisis-exploratorio-de-datos-aed-por-qué-matrices-de-comunidad-y-ambiental">Análisis
+    exploratorio de datos (AED). ¿Por qué? Matrices de comunidad y
+    ambiental.</a>
+  - <a href="#medidas-de-asociación-distancia"
+    id="toc-medidas-de-asociación-distancia">Medidas de asociación:
+    distancia.</a>
+  - <a href="#análisis-de-agrupamiento-cluster-analysis"
+    id="toc-análisis-de-agrupamiento-cluster-analysis">Análisis de
+    agrupamiento (cluster analysis).</a>
+  - <a href="#análisis-de-ordenación"
+    id="toc-análisis-de-ordenación">Análisis de ordenación.</a>
+  - <a href="#análisis-de-diversidad"
+    id="toc-análisis-de-diversidad">Análisis de diversidad.</a>
+  - <a href="#referencias" id="toc-referencias">Referencias</a>
 
 <!-- Este .md fue generado a partir del .Rmd homónimo. Edítese el .Rmd -->
 
@@ -40,34 +50,28 @@ Por José Ramón Martínez Batlle, septiembre de 2021
 
 Sitúa los recursos de los que dispondrás en el curso.
 
--   R+RStudio. Imprescindible. Dispondrás de una cuenta temporalmente en
-    mi servidor que ya ofrece estos recursos a través del navegador. No
-    obstante, puedes prescindir de mi servidor si instalas R+RStudio en
-    modo “Desktop” (más adelante te dejo algunos tutoriales de
-    instalación).
+- Cuenta en mi jupyterHub. Credenciales y ruta enviadas por correo.
 
--   Foro. Opcional. Se trata de un servidor Mattermost, parecido a
-    Slack, pero de código abierto. Envía tus preguntas por esta vía.
+- Recomendado en tu PC. Instala R+RStudio.
 
--   GitHub, o GitLab o BitBucket. Tener una cuenta en GitHub es opcional
-    para este curso, pero altamente recomendada. Quizá ya dispones de
-    una cuenta en GitHub, pero no es obligatorio para hacer consultas
-    (este texto se encuentra en GH y no se requiere tener una cuenta
-    para consultarlo), sólo para crear tu propio contenido. Si quieres
-    tener tu código alojado en la nube, disponible para ti y para “la
-    comunidad”, entonces usa alguna de estas “redes sociales de
-    desarrolladores”.
+- GitHub, o GitLab o BitBucket. Tener una cuenta en GitHub es opcional
+  para este curso, pero altamente recomendada. Quizá ya dispones de una
+  cuenta en GitHub, pero no es obligatorio para hacer consultas (este
+  texto se encuentra en GH y no se requiere tener una cuenta para
+  consultarlo), sólo para crear tu propio contenido. Si quieres tener tu
+  código alojado en la nube, disponible para ti y para “la comunidad”,
+  entonces usa alguna de estas “redes sociales de desarrolladores”.
 
--   Vídeos tutoriales en YouTube y repo de Github. Los vídeos tutoriales
-    se encuentran alojados en la lista de reproducción [“Ecología
-    numérica con
-    R”](https://www.youtube.com/playlist?list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ).
-    Estos vídeos se asocian con *scripts* de R que puedes usar como
-    fuente, y se encuentran en el repo [Scripts de análisis de
-    BCI](https://github.com/biogeografia-master/scripts-de-analisis-BCI).
-    No es necesario clonar dicho repo (más adelante explico en detalle),
-    es preferible visualizarlo desde GitHub, como verás en los vídeos
-    tutoriales en cada caso (detalles en el próximo apartado).
+- Vídeos tutoriales en YouTube y repo de Github. Los vídeos tutoriales
+  se encuentran alojados en la lista de reproducción [“Ecología numérica
+  con
+  R”](https://www.youtube.com/playlist?list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ).
+  Estos vídeos se asocian con *scripts* de R que puedes usar como
+  fuente, y se encuentran en el repo [Scripts de análisis de
+  BCI](https://github.com/biogeografia-master/scripts-de-analisis-BCI).
+  No es necesario clonar dicho repo (más adelante explico en detalle),
+  es preferible visualizarlo desde GitHub, como verás en los vídeos
+  tutoriales en cada caso (detalles en el próximo apartado).
 
 ### ¿Por qué R?
 
@@ -77,59 +81,42 @@ y para crear flujos de trabajo reproducibles.
 **En detalle**: Además de sus capacidades para análisis estadísticos
 avanzados, R se caracteriza por lo siguiente:
 
--   Dispone de un “ecosistema” de paquetes para análisis de datos
-    ecológicos y ambientales muy nutrido. Consulta este [CRAN Task
-    View](https://cran.r-project.org/web/views/Environmetrics.html) para
-    más detalles.
+- Dispone de un “ecosistema” de paquetes para análisis de datos
+  ecológicos y ambientales muy nutrido. Consulta este [CRAN Task
+  View](https://cran.r-project.org/web/views/Environmetrics.html) para
+  más detalles.
 
--   [Cuenta con potentes y versátiles herramientas de representación
-    gráfica](https://www.r-graph-gallery.com/)
+- [Cuenta con potentes y versátiles herramientas de representación
+  gráfica](https://www.r-graph-gallery.com/)
 
--   Existen varios entornos de desarrollo integrado (IDE) orientados a
-    la reproducibilidad y al control de versiones
-    (e.g. [RStudio](https://rstudio.com/)).
+- Existen varios entornos de desarrollo integrado (IDE) orientados a la
+  reproducibilidad y al control de versiones
+  (e.g. [RStudio](https://rstudio.com/)).
 
--   ¡ES LIBRE!
+- ¡ES LIBRE!
 
--   Utiliza intérprete de órdenes (consola), lo cual podría parecer un
-    obstáculo, pero es a fin de cuentas una gran ventaja. Los programas
-    basados en interfaz gráfica difícilmente garantizan
-    reproducibilidad, y no disponen de todas las herramientas de
-    análisis y representación con las que cuenta R.
+- Utiliza intérprete de órdenes (consola), lo cual podría parecer un
+  obstáculo, pero es a fin de cuentas una gran ventaja. Los programas
+  basados en interfaz gráfica difícilmente garantizan reproducibilidad,
+  y no disponen de todas las herramientas de análisis y representación
+  con las que cuenta R.
 
--   Cuenta con la diversa y activa comunidad R, que promueve el uso de
-    este entorno de programación, y a la vez ofrece apoyo para dudas
-    concretas e incluso para formar una comunidad R local.
+- Cuenta con la diversa y activa comunidad R, que promueve el uso de
+  este entorno de programación, y a la vez ofrece apoyo para dudas
+  concretas e incluso para formar una comunidad R local.
 
 ### Software libre, paradigma, reproducibilidad y control de versiones
 
--   Software libre, código abierto.
+- Software libre, código abierto.
 
- 
+- Programación orientada a objetos.
 
-<figure>
-<img src="img/os-apps-01.png" width="75%"/>
-<figcaption>
-Varias aplicaciones de software de código abierto y/o libres
-</figcaption>
-</figure>
+- **Demo**. Un vistazo rápido a cuadernos Jupyter, JupyterHub,
+  JupyterLab
 
- 
+- **Demo**. Un vistazo rápido a R y a la IDE RStudio (¿Qué es R?).
 
-<figure>
-<img src="img/os-apps-02.png" width="75%"/>
-<figcaption>
-ODK
-</figcaption>
-</figure>
-
- 
-
--   Programación orientada a objetos.
-
--   **Demo**. Un vistazo rápido a R y a la IDE RStudio (¿Qué es R?).
-
--   Reproducibilidad (Markdown, cuadernos RMarkdown).
+- Reproducibilidad (Markdown, cuadernos RMarkdown).
 
  
 
@@ -163,14 +150,17 @@ Tarjeta perforada
 
  
 
--   **Demo**. Probemos un sencillo ejemplo para demostrar la utilidad de
-    los cuadernos RMD de dos formas distintas:
+- **Demo**. Probemos un sencillo ejemplo para demostrar la utilidad de
+  los cuadernos RMD de dos formas distintas:
 
-    -   Desde cero.
+  - Desde cero.
 
-    -   Usando un repo preexistente alojado en GitHub.
+  - Un manuscrito.
 
--   Control de versiones (Git, GitHub).
+- **Demo**. Probemos un sencillo ejemplo para demostrar la utilidad de
+  los cuadernos Jupyter desde cero con ayuda de IA.
+
+- Control de versiones (Git, GitHub).
 
  
 
@@ -178,87 +168,54 @@ Tarjeta perforada
 <img src="img/version-control.jpg" width="75%"/>
 <figcaption>
 Fuente:
-<a href="http://phdcomics.com/comics/archive_print.php?comicid=1531">http://phdcomics.com/comics/archive\_print.php?comicid=1531</a>
+<a href="http://phdcomics.com/comics/archive_print.php?comicid=1531">http://phdcomics.com/comics/archive_print.php?comicid=1531</a>
 </figcaption>
 </figure>
 
  
 
--   ¿Para qué me sirve la cuenta de GitHub?
+- ¿Para qué me sirve la cuenta de GitHub?
 
-    -   En mis clases en la UASD son imprescindibles, aunque en este
-        curso es sólo “recomendada”.
+  - En mis clases en la UASD, antes Git y GitHub eran imprescindibles,
+    aunque en este curso son sólo herramientas “recomendadas”. En
+    cualquier caso, recuerda usar siempre alguna forma de control de
+    versiones.
 
-    -   **Demo**: Iniciar sesión en GitHub &gt; Buscar repo &gt;
-        Fork &gt; Clone &gt; \[Identificarme\] &gt; Commit &gt;
-        Push &gt; Ver cambios
+  - **Demo**: Iniciar sesión en GitHub \> Buscar repo \> Fork \> Clone
+    \> \[Identificarme\] \> Commit \> Push \> Ver cambios
 
 ### ¿Cómo instalar R y RStudio?
 
-Dispondrás de una cuenta temporalmente en mi servidor RStudio, por lo
-que no necesitas instalar R+Rstudio en tu máquina mientras dure el
-curso. No obstante, si quieres instalar R+RStudio por tu cuenta, te
-vendrá bien para el futuro si planeas seguir usando este entorno de
-programación. La versión más reciente de R es la 4, pero versiones
-&gt;3, como la 3.6, funcionan igualmente bien.
+No necesitas R y RStudio en este curso, pero si lo necesitaras a
+futuros, aquí te transcribo a continuación algunos punteros de
+vídeos-tutoriales recientes que explican cómo instalarlos a ambos.
+Lógicamente, la instalación es diferente según el sistema operativo,
+pero mi recomendación más importante es la siguiente: **sólo instala
+programas que procedan de fuentes confianza**. El repositorio oficial de
+R se llama [CRAN](https://cran.r-project.org/).
 
-Te transcribo a continuación algunos punteros de vídeos-tutoriales
-recientes que explican cómo instalarlos a ambos. Lógicamente, la
-instalación es diferente según el sistema operativo, pero mi
-recomendación más importante es la siguiente: **sólo instala programas
-que procedan de fuentes confianza**. El repositorio oficial de R se
-llama [CRAN](https://cran.r-project.org/).
+- Linux, GNU/Linux o *whatever*. Lee en el CRAN, pero también [este
+  vídeo](https://www.youtube.com/watch?v=RDUED5LHEfE) lo explica (no sé
+  si sea el más didáctico, pero es reciente y completo). Puedo ofrecer
+  soporte sobre cómo instalar en este sistema operativo (los puristas
+  dicen que no es un sistema operativo).
 
--   Linux, GNU/Linux o whatever. Lee en el CRAN, pero también [este
-    vídeo](https://www.youtube.com/watch?v=RDUED5LHEfE) lo explica (no
-    sé si sea el más didáctico, pero es reciente y completo). Puedo
-    ofrecer soporte sobre cómo instalar en este sistema operativo (los
-    puristas dicen que no es un sistema operativo).
+- Windows. En el CRAN encontrarás la instalación, y [este
+  vídeo](https://www.youtube.com/watch?v=h2IPWVXaUuU) me pareció
+  completo. No puedo ofrecer soporte sobre cómo instalar R en este
+  sistema operativo, aunque quizá puedo aportar ideas generales.
 
--   Windows. En el CRAN encontrarás la instalación, y [este
-    vídeo](https://www.youtube.com/watch?v=h2IPWVXaUuU) me pareció
-    completo. No puedo ofrecer soporte sobre cómo instalar R en este
-    sistema operativo, aunque quizá puedo aportar ideas generales.
+- macOS. No puedo sugerir nada aquí, así que mejor buscar opciones por
+  tu propia cuenta. En todo caso, la [página del
+  CRAN](https://cran.r-project.org/bin/macosx/) sobre cómo instalar en
+  macOS luce detallada
 
--   macOS. No puedo sugerir nada aquí, así que mejor buscar opciones por
-    tu propia cuenta. En todo caso, la [página del
-    CRAN](https://cran.r-project.org/bin/macosx/) sobre cómo instalar en
-    macOS luce detallada
-
--   Si tienes experiencia en contenedores, prueba con Docker. Esta
-    opción tiene múltiples ventajas, como por ejemplo: 1) No tienes que
-    pelearte con el infierno de las dependencias; 2) Normalmente, las
-    imágenes de Docker de R incorporan de serie varios paquetes muy
-    populares; 3) Dispondrás de RStudio Server y, dependiendo de la
-    imagen que descargues, del servidor Shiny.
-
-### La obtención de certificado, en cuatro pasos
-
-1.  Elige una familia de plantas de entre éstas: Annonaceae,
-    Apocynaceae, Arecaceae, Burseraceae, Chrysobalanaceae, Clusiaceae,
-    Euphorbiaceae, Fabaceae-caesalpinioideae, Fabaceae-mimosoideae,
-    Fabaceae-papilionoideae, Lauraceae, Malvaceae, Melastomataceae,
-    Meliaceae, Moraceae, Myrsinaceae, Myrtaceae, Piperaceae, Rubiaceae,
-    Rutaceae, Salicaceae, Sapindaceae, Sapotaceae, Urticaceae. Asimismo
-    Elige al menos uno de estos análisis : análisis de agrupamiento
-    (*cluster analysis*), análisis de ordenación, análisis de
-    diversidad. Informa al profesor (por foro o correo) para evitar de
-    tu elección y espera aprobación.
-
-2.  Aplícale, mediante script, el análisis elegido a la familia elegida.
-    Guarda el script, es un entregable. Nota: tu script lo ejecutaré,
-    así que debe ser reproducible.
-
-3.  Escribe un resumen de 250 palabras (máximo recomendado), que resuma
-    lo siguiente: qué responde tu análisis, cómo lo hiciste, qué
-    obtuviste y qué perspectivas abre. Usa el formato que prefieras:
-    RMarkdown, Markdown, TeX, o usa los procesadores de texto
-    tradicionales LibreOffice Writer, Microsoft Word. Me interesa el
-    contenido, no el formato. No es necesario añadir figuras ni tablas
-    al resumen, porque las veré al reproducir tu script.
-
-4.  Envía el script reproducible y el texto a mi dirección de correo, o
-    por el foro.
+- Si tienes experiencia en contenedores, prueba con Docker. Esta opción
+  tiene múltiples ventajas, como por ejemplo: 1) No tienes que pelearte
+  con el infierno de las dependencias; 2) Normalmente, las imágenes de
+  Docker de R incorporan de serie varios paquetes muy populares; 3)
+  Dispondrás de RStudio Server y, dependiendo de la imagen que
+  descargues, del servidor Shiny.
 
 ## Análisis de biodiversidad
 
@@ -275,23 +232,23 @@ variables necesarias para cualquier análisis de ecología numérica.
 
 Puedes consultar más en estos vídeos.
 
--   **Tarea**. [Vídeo (versión en español): Un vistazo a la ciencia y
-    los cientificos que trabajan en la isla de Barro
-    Colorado](https://www.youtube.com/watch?v=bN54RGtxFeM)
+- [Vídeo sugerido (versión en español): Un vistazo a la ciencia y los
+  cientificos que trabajan en la isla de Barro
+  Colorado](https://www.youtube.com/watch?v=bN54RGtxFeM)
 
--   [Vídeo sugerido (versión original en inglés): Barro Colorado Island:
-    BCI - Official Video - Smithsonian Tropical Research Institute in
-    Panama](https://www.youtube.com/watch?v=tRGG-XmNMhk)
+- [Vídeo sugerido (versión original en inglés): Barro Colorado Island:
+  BCI - Official Video - Smithsonian Tropical Research Institute in
+  Panama](https://www.youtube.com/watch?v=tRGG-XmNMhk)
 
--   [Vídeo sugerido: Datos censales parcela permanente 50 ha árboles
-    BCI, explicado por el
-    tali](https://www.youtube.com/watch?v=Hm6yO_V6NUY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=1)
+- [Vídeo sugerido: Datos censales parcela permanente 50 ha árboles BCI,
+  explicado por el
+  tali](https://www.youtube.com/watch?v=Hm6yO_V6NUY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=1)
 
 ### Una rápida intro a R
 
--   **Demo + tarea**. Objetos en R. Creé [este
-    tutorial](https://geofis.shinyapps.io/tutorial1/) hace ya algún
-    tiempo, pero pienso que sigue siendo útil. **Demo** en vivo.
+- **Demo**. Objetos en R. Creé [este
+  tutorial](https://geofis.shinyapps.io/tutorial1/) hace ya algún
+  tiempo, pero pienso que sigue siendo útil. **Demo** en vivo.
 
 ### Análisis exploratorio de datos (AED). ¿Por qué? Matrices de comunidad y ambiental.
 
@@ -307,91 +264,92 @@ correlación de Pearson) a dos posiciones decimales. Fuente:
 
  
 
--   **Demo + tarea**. [Vídeo: Análisis exploratorio de datos, parte 1.
-    Objetos en R, insertar en documento RMarkdown. Recomendado hasta el
-    minuto
-    23:30](https://www.youtube.com/watch?v=vRWoqzJrnk4&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=4)
+- [Vídeo sugerido: Análisis exploratorio de datos, parte 1. Objetos en
+  R, insertar en documento RMarkdown. Recomendado hasta el minuto
+  23:30](https://www.youtube.com/watch?v=vRWoqzJrnk4&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=4)
 
-    > En el vídeo tutorial, así como en los siguientes, verás que me
-    > refiero a scripts que disponen de dos versiones cada uno: una
-    > versión Markdown (archivo `.md`) y una versión R (archivo `.R`).
-    > Para reproducir análisis Utiliza la versión *Raw*" del
-    > archivo`.R`, porque desde ésta podrás copiar código y pegarlo en R
-    > sin problemas. La otra versión, la `.md`, te sirve para ver el
-    > resultado “tejido” que obtendrías al ejecutar cada script.
+  > En el vídeo tutorial, así como en los siguientes, verás que me
+  > refiero a scripts que disponen de dos versiones cada uno: una
+  > versión Markdown (archivo `.md`) y una versión R (archivo `.R`).
+  > Para reproducir análisis Utiliza la versión *Raw*” del archivo`.R`,
+  > porque desde ésta podrás copiar código y pegarlo en R sin problemas.
+  > La otra versión, la `.md`, te sirve para ver el resultado “tejido”
+  > que obtendrías al ejecutar cada script.
 
--   [Vídeo sugerido: Análisis exploratorio de datos, parte 2. Tutorial
-    de tidyverse.
-    T1:48:09](https://www.youtube.com/watch?v=YiUmteAbLt8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=5)
+- **Demo**. AED con ayuda de IA.
 
-    > Complementar con [este ejemplo](pipa-no-pipa.md) sobre el uso de
-    > la pipa `%>%` en R.
+Cierre del primer día.
 
--   **Demo + tarea**. [Vídeo: Análisis exploratorio de datos, parte 3.
-    Mapas de riqueza y abundancia.
-    T35:31](https://www.youtube.com/watch?v=okMDGdgQ1EM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=6)
+- [Vídeo sugerido: Análisis exploratorio de datos, parte 2. Tutorial de
+  tidyverse.
+  T1:48:09](https://www.youtube.com/watch?v=YiUmteAbLt8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=5)
 
--   [Vídeo sugerido: Análisis exploratorio de datos, parte 4. Mapas de
-    variables ambientales.
-    T27:37](https://www.youtube.com/watch?v=qe7qD03n0jI&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=7)
+  > Complementar con [este ejemplo](pipa-no-pipa.md) sobre el uso de la
+  > pipa `%>%` en R.
 
--   **Demo + tarea**. [Vídeo: Análisis exploratorio de datos, parte 5.
-    Paneles de correlación.
-    T40:39](https://www.youtube.com/watch?v=xfKGOWNyJVc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=8)
+- [Vídeo sugerido: Análisis exploratorio de datos, parte 3. Mapas de
+  riqueza y abundancia.
+  T35:31](https://www.youtube.com/watch?v=okMDGdgQ1EM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=6)
 
--   [Vídeo sugerido: Análisis exploratorio de datos, parte 6. Mapas de
-    variables ambientales por lotes.
-    T15:33](https://www.youtube.com/watch?v=SNYhP5mqlTQ&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=9)
+- [Vídeo sugerido: Análisis exploratorio de datos, parte 4. Mapas de
+  variables ambientales.
+  T27:37](https://www.youtube.com/watch?v=qe7qD03n0jI&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=7)
+
+- [Vídeo sugerido: Análisis exploratorio de datos, parte 5. Paneles de
+  correlación.
+  T40:39](https://www.youtube.com/watch?v=xfKGOWNyJVc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=8)
+
+- [Vídeo sugerido: Análisis exploratorio de datos, parte 6. Mapas de
+  variables ambientales por lotes.
+  T15:33](https://www.youtube.com/watch?v=SNYhP5mqlTQ&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=9)
 
 ### Medidas de asociación: distancia.
 
--   **Demo + tarea**. [Vídeo: Medición de asociación, parte 1. Teoría
-    sobre los modos Q y R, Orlóci.
-    T29:12](https://www.youtube.com/watch?v=yQ10lp0-nHc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=10)
+- [Vídeo sugerido: Medición de asociación, parte 1. Teoría sobre los
+  modos Q y R, Orlóci.
+  T29:12](https://www.youtube.com/watch?v=yQ10lp0-nHc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=10)
 
--   [Vídeo sugerido: Medición de asociación, parte 2. Modo Q aplicado.
-    T36:11](https://www.youtube.com/watch?v=M3GfFzkJFys&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=11)
+- [Vídeo sugerido: Medición de asociación, parte 2. Modo Q aplicado.
+  T36:11](https://www.youtube.com/watch?v=M3GfFzkJFys&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=11)
 
--   [Vídeo sugerido: Medición de asociación, parte 3. Modo R aplicado.
-    T28:16](https://www.youtube.com/watch?v=mef9NIjXBWY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=12)
+- [Vídeo sugerido: Medición de asociación, parte 3. Modo R aplicado.
+  T28:16](https://www.youtube.com/watch?v=mef9NIjXBWY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=12)
 
 ### Análisis de agrupamiento (cluster analysis).
 
--   [Vídeo sugerido: Análisis de agrupamiento (cluster analysis),
-    parte 1. Agrupamiento jerárquico.
-    T38:14](https://www.youtube.com/watch?v=AW5L-uZlEvk&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=13)
+- [Vídeo sugerido: Análisis de agrupamiento (cluster analysis), parte 1.
+  Agrupamiento jerárquico.
+  T38:14](https://www.youtube.com/watch?v=AW5L-uZlEvk&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=13)
 
--   **Demo + tarea**. [Vídeo: Análisis de agrupamiento (cluster
-    analysis), parte 2. Interpretación/comparación de resultados.
-    T1:11:54](https://www.youtube.com/watch?v=y1ZZh9ajT_U&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=14)
+- [Vídeo sugerido: Análisis de agrupamiento (cluster analysis), parte 2.
+  Interpretación/comparación de resultados.
+  T1:11:54](https://www.youtube.com/watch?v=y1ZZh9ajT_U&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=14)
 
--   [Vídeo sugerido: Análisis de agrupamiento, parte 3. Grupos
-    (clústers), variables ambientales y mapas.
-    T33:49](https://www.youtube.com/watch?v=ZrXpgDAaDo8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=15)
+- [Vídeo sugerido: Análisis de agrupamiento, parte 3. Grupos (clústers),
+  variables ambientales y mapas.
+  T33:49](https://www.youtube.com/watch?v=ZrXpgDAaDo8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=15)
 
--   **Demo + tarea**. [Vídeo: Análisis de agrupamiento, parte 4.
-    Asociación de especies con hábitats.
-    T55:05](https://www.youtube.com/watch?v=JK7hq71onKs&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=16)
+- [Vídeo sugerido: Análisis de agrupamiento, parte 4. Asociación de
+  especies con hábitats.
+  T55:05](https://www.youtube.com/watch?v=JK7hq71onKs&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=16)
 
 ### Análisis de ordenación.
 
--   **Demo + tarea**. [Vídeo: Técnicas de ordenación, parte 1.
-    Ordenación no restringida o ‘simple’.
-    T2:08:05](https://www.youtube.com/watch?v=xLFz4WRgoDE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=17)
+- [Vídeo sugerido: Técnicas de ordenación, parte 1. Ordenación no
+  restringida o ‘simple’.
+  T2:08:05](https://www.youtube.com/watch?v=xLFz4WRgoDE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=17)
 
--   [Vídeo sugerido: Técnicas de ordenación, parte 2. Ordenación
-    restringida o ‘canónica’. T1:11:44]()
+- [Vídeo sugerido: Técnicas de ordenación, parte 2. Ordenación
+  restringida o ‘canónica’.
+  T1:11:44](https://www.youtube.com/watch?v=bKyBGxNotgM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=18)
 
 ### Análisis de diversidad.
 
--   **Demo + tarea**. [Vídeo: Análisis de diversidad, parte 1.
-    Diversidad alpha.
-    T1:45:15](https://www.youtube.com/watch?v=QVfVH2bVJbM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=19)
+- [Vídeo sugerido: Análisis de diversidad, parte 1. Diversidad alpha.
+  T1:45:15](https://www.youtube.com/watch?v=QVfVH2bVJbM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=19)
 
--   [Vídeo sugerido: Análisis de diversidad, parte 2. Diversidad beta.
-    T23:29](https://www.youtube.com/watch?v=rJ67sF0hYuE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=20)
-
-### Hacia dónde va el análisis de biodiversidad.
+- [Vídeo sugerido: Análisis de diversidad, parte 2. Diversidad beta.
+  T23:29](https://www.youtube.com/watch?v=rJ67sF0hYuE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=20)
 
 ### Referencias
 
