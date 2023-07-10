@@ -73,6 +73,8 @@ Sitúa los recursos de los que dispondrás en el curso.
   es preferible visualizarlo desde GitHub, como verás en los vídeos
   tutoriales en cada caso (detalles en el próximo apartado).
 
+- ChatGPT de OpenAI. Recomendado crearse cuente.
+
 ### ¿Por qué R?
 
 **En corto**: R cuenta con múltiples herramientas de análisis ecológico

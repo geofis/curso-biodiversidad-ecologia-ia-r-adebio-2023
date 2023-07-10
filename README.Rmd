@@ -25,7 +25,9 @@ Sitúa los recursos de los que dispondrás en el curso.
 
 - GitHub, o GitLab o BitBucket. Tener una cuenta en GitHub es opcional para este curso, pero altamente recomendada. Quizá ya dispones de una cuenta en GitHub, pero no es obligatorio para hacer consultas (este texto se encuentra en GH y no se requiere tener una cuenta para consultarlo), sólo para crear tu propio contenido. Si quieres tener tu código alojado en la nube, disponible para ti y para "la comunidad", entonces usa alguna de estas "redes sociales de desarrolladores".
 
-- Vídeos tutoriales en YouTube y repo de Github. Los vídeos tutoriales se encuentran alojados en la lista de reproducción ["Ecología numérica con R"](https://www.youtube.com/playlist?list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ). Estos vídeos se asocian con *scripts* de R que puedes usar como fuente, y se encuentran en el repo [Scripts de análisis de BCI](https://github.com/biogeografia-master/scripts-de-analisis-BCI). No es necesario clonar dicho repo (más adelante explico en detalle), es preferible visualizarlo desde GitHub, como verás en los vídeos tutoriales en cada caso (detalles en el próximo apartado). 
+- Vídeos tutoriales en YouTube y repo de Github. Los vídeos tutoriales se encuentran alojados en la lista de reproducción ["Ecología numérica con R"](https://www.youtube.com/playlist?list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ). Estos vídeos se asocian con *scripts* de R que puedes usar como fuente, y se encuentran en el repo [Scripts de análisis de BCI](https://github.com/biogeografia-master/scripts-de-analisis-BCI). No es necesario clonar dicho repo (más adelante explico en detalle), es preferible visualizarlo desde GitHub, como verás en los vídeos tutoriales en cada caso (detalles en el próximo apartado).
+
+- ChatGPT de OpenAI. Recomendado crearse cuente.
 
 ### ¿Por qué R?
 
