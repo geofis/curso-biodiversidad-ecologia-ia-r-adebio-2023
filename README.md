@@ -307,8 +307,8 @@ Cierre del primer día.
 
 ### Medidas de asociación: distancia.
 
-- [Vídeo sugerido: Medición de asociación, parte 1. Teoría sobre los
-  modos Q y R, Orlóci.
+- **Demo**. [Vídeo sugerido: Medición de asociación, parte 1. Teoría
+  sobre los modos Q y R, Orlóci.
   T29:12](https://www.youtube.com/watch?v=yQ10lp0-nHc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=10)
 
 - [Vídeo sugerido: Medición de asociación, parte 2. Modo Q aplicado.
@@ -323,8 +323,8 @@ Cierre del primer día.
   Agrupamiento jerárquico.
   T38:14](https://www.youtube.com/watch?v=AW5L-uZlEvk&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=13)
 
-- [Vídeo sugerido: Análisis de agrupamiento (cluster analysis), parte 2.
-  Interpretación/comparación de resultados.
+- **Demo**. [Vídeo sugerido: Análisis de agrupamiento (cluster
+  analysis), parte 2. Interpretación/comparación de resultados.
   T1:11:54](https://www.youtube.com/watch?v=y1ZZh9ajT_U&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=14)
 
 - [Vídeo sugerido: Análisis de agrupamiento, parte 3. Grupos (clústers),
@@ -337,8 +337,8 @@ Cierre del primer día.
 
 ### Análisis de ordenación.
 
-- [Vídeo sugerido: Técnicas de ordenación, parte 1. Ordenación no
-  restringida o ‘simple’.
+- **Demo**. [Vídeo sugerido: Técnicas de ordenación, parte 1. Ordenación
+  no restringida o ‘simple’.
   T2:08:05](https://www.youtube.com/watch?v=xLFz4WRgoDE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=17)
 
 - [Vídeo sugerido: Técnicas de ordenación, parte 2. Ordenación
@@ -347,7 +347,8 @@ Cierre del primer día.
 
 ### Análisis de diversidad.
 
-- [Vídeo sugerido: Análisis de diversidad, parte 1. Diversidad alpha.
+- **Demo**. [Vídeo sugerido: Análisis de diversidad, parte 1. Diversidad
+  alpha.
   T1:45:15](https://www.youtube.com/watch?v=QVfVH2bVJbM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=19)
 
 - [Vídeo sugerido: Análisis de diversidad, parte 2. Diversidad beta.
